@@ -14,8 +14,8 @@
     <h1 class="text-center mt-5">Tambah Data pegawai</h1>
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-6 ">
-                <div class="card  mt-5">
+            <div class="col-md-12">
+                <div class="card mt-5">
                    <div class="card-body">
                     <form action="/insertdata" method="POST" enctype="multipart/form-data" >
                         @csrf
@@ -35,6 +35,12 @@
                             <label>Nomor telepom</label>
                             <input type="number" class="form-control" name="notelpon">
                         </div>
+                        <label for="">masukkan foto</label>
+                        <div class="custom-file">
+                          <input type="file" class="custom-file-input" name="foto" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                          <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                        </div>
+                  
                         
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>

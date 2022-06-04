@@ -16,9 +16,16 @@ class EmployeeController extends Controller
     public function tambahpegawai(){
         return view('tambahdata');
     }
+
     public function insertdata(Request $request){
         // dd($request->all());
-        Employee::create($request->all());
+        $data = Employee::create($request->all());
+
+        if ($request->hasFile('foto')) {
+            $request->file('foto')->move('fotopegawai/',$request->file('foto')->getClientOriginalName());
+            $data->foto = $request->file('foto')->getClientOriginalName();
+            $data->save();
+        }
         return redirect()->route('pegawai')->with('success','data berhasil ditambahkan');
         
     }
