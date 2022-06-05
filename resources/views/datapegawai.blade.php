@@ -18,6 +18,13 @@
         <div class="row justify-content-center mt-5">
             <div class="col-md-8 ">
                 <a href="/tambahpegawai" class="btn btn-success mb-2">tambah +</a>
+
+                <form class="form-inline" action="/pegawai" method="GET">
+                  <div class="form-group mx-sm-3 mb-2">
+                    <input type="search" name="search" class="form-control" id="inputsearch2" placeholder="search">
+                  </div>
+                </form>
+
                 {{-- @if ($message = Session::get('success'))
                     <div class="alert alert-success">
                       {{ $message }}

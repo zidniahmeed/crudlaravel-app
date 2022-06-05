@@ -37,7 +37,7 @@
                         </div>
                         <label for="">masukkan foto</label>
                         <div class="custom-file">
-                          <input type="file" class="custom-file-input" name="foto" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                          <input type="file" class="custom-file-input" name="foto" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" required>
                           <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
                         </div>
                   
